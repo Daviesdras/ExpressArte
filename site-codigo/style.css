@@ -27,7 +27,7 @@ nav {
   align-items: center; /* Centralizando itens horizontalmente */
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #212121;
-  height: auto; /* Alterando altura para ajustar automaticamente ao conteúdo */
+  height: 100px; /* Alterando altura para ajustar automaticamente ao conteúdo */
 }
 
 .nav-list {
@@ -117,10 +117,10 @@ nav {
   display: flex;
   flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
   gap: 20px; /* Espaço entre os cards */
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 20px auto;
-  padding: 0 20px;
-  justify-content: space-between;
+  padding: 0 20;
+  justify-content: center;
 }
 .card {
   width: 300px;
@@ -151,61 +151,39 @@ nav {
 .image {
   width: 300px;
   height: 148px;
-  background: rgb(223,235,56);
-  background: rgb(56,235,226);
-  background: linear-gradient(163deg, rgba(56,235,226,1) 0%, rgba(134,221,245,1) 50%);
-}
-
-.save {
-  background: #eb4b38;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.see-more {
-  background: #ab4b38;
-  border: none;
-  border-radius: 5px;
-  color: white;
-}
-
-.save, .see-more {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 5px;
-  padding: 5px;
-}
-
-.save__icon, .see-more__icon {
-  width: 15px;
-  fill: white;
 }
 
 .card__info {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
   padding: 15px;
   gap: 3px;
+  align-items: center; 
 }
 
 .page {
   font-size: 13px;
   font-weight: 100;
+  margin-left: auto;
+  color: #ffffff;
 }
 
 .title {
   text-decoration: none;
   font-weight: 600;
   font-size: 17px;
-  color: black;
+  color: rgb(255, 255, 255);
+  margin-right: auto;
 }
 
 .content {
-  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo para destacar o conteúdo */
+  padding: 10px;
 }
 
 .card:hover {
