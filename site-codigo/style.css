@@ -167,6 +167,7 @@ nav {
   font-weight: 100;
   margin-left: auto;
   color: #ffffff;
+  
 }
 
 .title {
@@ -175,6 +176,7 @@ nav {
   font-size: 17px;
   color: rgb(255, 255, 255);
   margin-right: auto;
+  margin-top: 15%;
 }
 
 .content {
