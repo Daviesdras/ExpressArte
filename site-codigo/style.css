@@ -2,11 +2,14 @@
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   background-image: url(/imagens/fundo.jpg);
-  background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+  background-repeat: no-repeat;
+  /* Evita a repetição da imagem de fundo */
   background-size: cover;
 }
+
 a {
   color: #fff;
   text-decoration: none;
@@ -22,37 +25,59 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: center;
-  margin-bottom: 20px; /* Adicionando margem abaixo da logo */
+  margin-bottom: 20px;
+  /* Adicionando margem abaixo da logo */
+  color: #383eab;
+
 }
 
 nav {
   display: flex;
-  flex-direction: column; /* Alterando a direção do flex container para vertical */
-  align-items: center; /* Centralizando itens horizontalmente */
+  flex-direction: column;
+  /* Alterando a direção do flex container para vertical */
+  align-items: center;
+  /* Centralizando itens horizontalmente */
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #212121;
-  height: 100px; /* Alterando altura para ajustar automaticamente ao conteúdo */
+  height: 100px;
+  /* Alterando altura para ajustar automaticamente ao conteúdo */
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  flex-direction: row; /* Alterando a direção do flex container para horizontal */
-  align-items: center; /* Centralizando itens horizontalmente */
-  justify-content: space-around; /* Distribuindo o espaço entre os itens */
+  flex-direction: row;
+  /* Alterando a direção do flex container para horizontal */
+  align-items: center;
+  /* Centralizando itens horizontalmente */
+  justify-content: space-around;
+  /* Distribuindo o espaço entre os itens */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
 }
 
 .nav-list li {
   letter-spacing: 3px;
-  margin: 0 70px; 
+  margin: 0 70px;
+  color: #383eab;
+  font-size: 130%;
+}
+
+.nav-list li a {
+  color: rgb(206, 109, 12);
 }
 
 .mobile-menu {
   display: none;
   cursor: pointer;
-  position: fixed; /* Posicionando o menu móvel de forma fixa */
-  top: 20px; /* Ajustando a distância do topo */
-  right: 20px; /* Ajustando a distância da direita */
+  position: fixed;
+  /* Posicionando o menu móvel de forma fixa */
+  top: 20px;
+  /* Ajustando a distância do topo */
+  right: 20px;
+  /* Ajustando a distância da direita */
+  color: #d2530ae3;
 }
 
 .mobile-menu div {
@@ -68,6 +93,7 @@ nav {
   body {
     overflow-x: hidden;
   }
+
   .nav-list {
     position: absolute;
     top: 8vh;
@@ -81,10 +107,12 @@ nav {
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
+
   .nav-list li {
     margin-right: 0;
     opacity: 0;
   }
+
   .mobile-menu {
     display: block;
   }
@@ -99,6 +127,7 @@ nav {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -118,16 +147,19 @@ nav {
 }
 
 /* aqui ja é os card */
-.card-container{
+.card-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
-  gap: 50px; /* Espaço entre os cards */
+  flex-wrap: wrap;
+  /* Permite que os cards quebrem para a próxima linha */
+  gap: 50px;
+  /* Espaço entre os cards */
   max-width: 1150px;
   margin: 60px auto;
   padding: 0 20;
   justify-content: center;
 
 }
+
 .card {
   width: 300px;
   height: 325px;
@@ -166,7 +198,7 @@ nav {
   flex-grow: 1;
   padding: 15px;
   gap: 3px;
-  align-items: center; 
+  align-items: center;
   z-index: 3;
 }
 
@@ -175,7 +207,7 @@ nav {
   font-weight: 100;
   margin-left: auto;
   color: #ffffff;
-  
+
 }
 
 .title {
@@ -192,7 +224,8 @@ nav {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo para destacar o conteúdo */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Cor de fundo para destacar o conteúdo */
   padding: 10px;
 }
 
