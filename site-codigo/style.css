@@ -8,6 +8,8 @@ body {
   background-repeat: no-repeat;
   /* Evita a repetição da imagem de fundo */
   background-size: cover;
+  min-height: 100vh;
+  background-position: center;
 }
 
 a {
@@ -26,35 +28,25 @@ a:hover {
   letter-spacing: 4px;
   text-align: center;
   margin-bottom: 20px;
-  /* Adicionando margem abaixo da logo */
   color: #383eab;
-
 }
 
 nav {
   display: flex;
   flex-direction: column;
-  /* Alterando a direção do flex container para vertical */
   align-items: center;
-  /* Centralizando itens horizontalmente */
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #212121;
   height: 100px;
-  /* Alterando altura para ajustar automaticamente ao conteúdo */
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   flex-direction: row;
-  /* Alterando a direção do flex container para horizontal */
   align-items: center;
-  /* Centralizando itens horizontalmente */
   justify-content: space-around;
-  /* Distribuindo o espaço entre os itens */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
 }
 
 .nav-list li {
@@ -72,12 +64,9 @@ nav {
   display: none;
   cursor: pointer;
   position: fixed;
-  /* Posicionando o menu móvel de forma fixa */
   top: 20px;
-  /* Ajustando a distância do topo */
   right: 20px;
-  /* Ajustando a distância da direita */
-  color: #d2530ae3;
+  color: #d2530a;
 }
 
 .mobile-menu div {
@@ -87,6 +76,66 @@ nav {
   margin: 8px;
   transition: 0.3s;
   z-index: 2;
+}
+
+nav.menu-lateral {
+  width: 60px;
+  height: 100%;
+  background-color: #d2530a;
+  padding: 40px 0 40px 1%;
+  box-shadow: 3px 0 0 #302118;
+  position: fixed;
+  top: 0;
+  left: 0; /* Alinha à esquerda da página */
+  overflow: hidden;
+  transition: .2s;
+}
+
+nav.menu-lateral:hover {
+  width: 300px;
+}
+
+.btn-expandir {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.btn-expandir > i {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ul {
+  height: 100%;
+  list-style: none;
+}
+
+ul li.item-menu {
+  transition: .3s;
+}
+
+ul li.item-menu:hover {
+  background: #383eab;
+}
+
+ul li.item-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 25px;
+}
+
+ul li.item-menu a .icon > i {
+  font-size: 30px;
+  margin-left: 75px;
 }
 
 @media (max-width: 999px) {
@@ -146,18 +195,16 @@ nav {
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
-/* aqui ja é os card */
+/* Estilos dos cards */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  /* Permite que os cards quebrem para a próxima linha */
   gap: 50px;
-  /* Espaço entre os cards */
-  max-width: 1150px;
-  margin: 60px auto;
-  padding: 0 20;
+  max-width: 1400px;
+  margin: 60px auto 0;
+  padding: 0 20px;
   justify-content: center;
-
+  padding-left: 60px; /* Espaço para a barra lateral */
 }
 
 .card {
@@ -173,18 +220,21 @@ nav {
   color: #212121;
   border: 2px solid #4e35b4;
   transition: all .5s ease;
-  z-index: 3;
+  z-index: 1;
 }
 
 .icons {
   display: flex;
   flex-direction: row;
-  gap: 5px;
   position: absolute;
   right: 15px;
   top: 15px;
   transition: opacity 0.5s ease;
   opacity: 0;
+}
+
+.icons img {
+  margin-right: 5px;
 }
 
 .image {
@@ -207,7 +257,6 @@ nav {
   font-weight: 100;
   margin-left: auto;
   color: #ffffff;
-
 }
 
 .title {
@@ -216,7 +265,7 @@ nav {
   font-size: 17px;
   color: rgb(255, 255, 255);
   margin-right: auto;
-  margin-top: 15%;
+  margin-top: 15px;
 }
 
 .content {
@@ -225,23 +274,9 @@ nav {
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
-  /* Cor de fundo para destacar o conteúdo */
   padding: 10px;
 }
 
 .card:hover {
-  box-shadow: 5px 5px 10px 0px #ab4b3866;
-}
-
-.card:hover .icons {
-  z-index: 1;
-  opacity: 1;
-}
-
-.card:hover .image {
-  filter: brightness(.8);
-}
-
-.card:hover .title {
-  color: #383eab;
+  box-shadow: 5px 5px 10px 0px #ab4b;
 }
