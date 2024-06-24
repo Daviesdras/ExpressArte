@@ -81,7 +81,7 @@ nav {
 nav.menu-lateral {
   width: 60px;
   height: 100%;
-  background-color: #d2530a;
+  background-color: #232a33;
   padding: 40px 0 40px 1%;
   box-shadow: 3px 0 0 #302118;
   position: fixed;
@@ -89,6 +89,7 @@ nav.menu-lateral {
   left: 0; /* Alinha à esquerda da página */
   overflow: hidden;
   transition: .2s;
+  z-index: 2;
 }
 
 nav.menu-lateral:hover {
