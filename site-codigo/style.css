@@ -33,7 +33,7 @@ nav {
 
 section {
   padding-block: min(200vh, 5rem);
-  width: calc(min(86.70rem, 95%));
+  width: calc(min(96.70rem, 95%));
   margin-inline: auto;
   color: #111;
 }
@@ -54,6 +54,7 @@ section .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   gap: 3.0rem;
+  margin-left: 90px;
 }
 
 section .container .card:nth-child(1) .box .icon .iconBox {
