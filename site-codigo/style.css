@@ -184,7 +184,6 @@ section .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   gap: 3.0rem;
-  margin-left: 90px;
 }
 
 section .container .card:nth-child(1) .box .icon .iconBox {
