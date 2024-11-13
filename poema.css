@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    align-items: center;
+    justify-content: space-between;
+    background: #080808da;
+    height: 100px;
+    padding: 0 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    margin-bottom: 9px;
+}
+
+#imagem {
+    float: left; /* Alinha a imagem à esquerda */
+    margin: 2% 20px; /* Espaçamento entre a imagem e o texto */
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.texto {
+    float: right; /* Alinha o texto à direita */
+    width: calc(100% - 540px); /* Garante que o texto ocupe o espaço restante ao lado da imagem */
+    margin-top: 2%;
+}
+.titulo{
+    text-align: center;
+    font-size: 44px;
+}
