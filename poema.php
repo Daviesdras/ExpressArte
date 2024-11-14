@@ -74,7 +74,7 @@ $conn->close();
             <?php endif; ?>
             <h3 class="titulo"><?php echo htmlspecialchars($titulo); ?></h3>
             <p class="texto"><?php echo nl2br(htmlspecialchars($poema)); ?></p>
-            <h3 class="nome"><?php echo "--".htmlspecialchars($nome_artista); ?></h3>
+            <h3 class="texto"><?php echo "--".htmlspecialchars($nome_artista); ?></h3>
         </div>
 
 </body>

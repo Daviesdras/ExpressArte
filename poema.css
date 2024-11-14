@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +17,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background: #080808da;
-    height: 100px;
+    height: 90px;
     padding: 0 20px;
     position: relative;
     flex-wrap: wrap;
@@ -43,19 +41,114 @@ nav {
 }
 
 #imagem {
-    float: left; /* Alinha a imagem à esquerda */
-    margin: 2% 20px; /* Espaçamento entre a imagem e o texto */
+    float: left;
+    margin: 2% 20px;
     width: 500px;
     height: 600px;
     object-fit: cover;
+    margin-left: 5%;
 }
 
 .texto {
-    float: right; /* Alinha o texto à direita */
-    width: calc(100% - 540px); /* Garante que o texto ocupe o espaço restante ao lado da imagem */
-    margin-top: 2%;
+    float: right;
+    width: calc(57% - 100px);
+    font-size: 20px;
 }
-.titulo{
+
+.titulo {
     text-align: center;
     font-size: 44px;
+}
+
+.nome {
+    float: right;
+    width: calc(50% - 100px);
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    #imagem {
+        width: 450px;
+        height: 500px;
+    }
+
+    .nav-list {
+        font-size: 18px;
+        gap: 40px;
+    }
+
+    .texto {
+        width: calc(50% - 80px);
+    }
+
+    .titulo {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-list {
+        gap: 30px;
+    }
+
+    #imagem {
+        width: 350px;
+        height: 450px;
+    }
+
+    .texto {
+     
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .titulo {
+        font-size: 34px;
+    }
+
+    .nome {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* This is the key part: For screens less than 600px, stack image on top and text below */
+@media screen and (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+      
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    /* Stack the image on top */
+    #imagem {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* Make sure text is below and properly styled */
+    .texto {
+        width: 100%;
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .titulo {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .nome {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
