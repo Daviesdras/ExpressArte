@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CZ+Guides&family=Playwrite+ID+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CZ+Guides&family=Playwrite+ID+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #171313;
+    color: white;
+}
+
+header {
+    margin-top: 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin-top: 35px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    transform: translateX(-40vh); /* Ajusta a posição dos itens para a esquerda */
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffde59;
+    border-bottom: 3px solid #ffde59;
+}
+
+@media(max-width:995px) {
+    nav {
+        
+        display: none;
+       
+        
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #8bbf12;
+    }
+    
+}
+
+.home {
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: #f2cd88;
+}
+.home-content {
+    position: absolute;
+    top: 30%;
+    margin-left: 20vh;
+    font-family: 'Poppins', sans-serif;
+}
+.home .home-content h1 {
+   
+    font-weight: 700;
+    line-height: 1.3;
+}
+h1{
+    font-size: 6rem;
+}
+span {
+    color: #ffde59;
+}
+
+.home-content h3 {
+    font-size: 5vh;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 2.6vh;
+    max-width: 600px
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.home-img img {
+    position: relative;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+    width: 146vh;
+    height: 100vh;
+    /* Faz a imagem ocupar toda a altura da viewport */
+    max-height: 100%;
+    /* Limita a altura máxima */
+    object-fit: cover;
+    /* Ajusta a imagem ao container sem distorcer */
+}
+#titulo {
+    font-size: 2.4rem;
+    font-family: "Fahkwang", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.poema {
+    position: absolute;
+    top: 20%;
+    margin-left: 150vh;
+    color: #000000;
+    font-size: 2vh;
+    font-family: "Fahkwang", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+#pena{
+    position: absolute;
+    top: 58%; /* Altere para um valor proporcional, se necessário */
+    left: 90%; /* Usando 'left' ao invés de 'margin-left' */
+    transform: translate(-50%, -50%); /* Centraliza a imagem relativa à posição definida */
+    width: auto ; /* Ajuste automático de largura */
+    height: 300px; /* Ajuste automático de altura */
+}
+
+@media (max-width: 995px) {
+    .home-img img {
+        height: 50vh;
+        /* Adapta a altura para telas menores */
+        margin-top: 4rem;
+        object-fit: cover;
+        /* Mantém o ajuste da imagem */
+        border-radius: 10%;
+        
+    }
+    #pena{
+        display: none;
+    }
+    .home{
+        background: none;
+    }
+    .home-content{
+        position: relative;
+        margin-left: 0;
+    }
+    .logo{
+        width: 17vh;
+    }
+    .poema{
+        display: none;
+    }
+
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #dfc536;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #d9cd45;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #dbbb63;
+    box-shadow: 0 0 35px #29048f;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #f2cd88;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #000000;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #f2cd88;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #dcb979;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 25px #070706;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "software Developer";
+    color: #ffde59;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #ffffff;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    25% {
+        content: "artes";
+    }
+
+    26%,
+    45% {
+        content: "contos";
+    }
+
+    46%,
+    65% {
+        content: "poesia";
+    }
+
+    66%,
+    100% {
+        content: "e muito mais";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 4rem 2rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+
+}

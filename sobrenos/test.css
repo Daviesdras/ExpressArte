@@ -1,0 +1,253 @@
+/* Importa a fonte Codec Pro */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* Define estilos básicos para a página */
+body {
+    margin: 0;
+    font-family: "Outfit", system-ui;
+    background: url('img/ExpressArte.png') no-repeat center center fixed;
+    /* Adiciona uma imagem de fundo fixa */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área do fundo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Alinha o conteúdo ao centro horizontalmente */
+    justify-content: flex-start;
+    /* Alinha o conteúdo ao topo verticalmente */
+    min-height: 100vh;
+    /* Garante que o body ocupe a altura total da viewport */
+}
+
+.voltar {
+        position: relative;
+        text-align: center;
+        background-color: #ff914d;
+        color: white;
+        font-size: 17px;
+        padding: 4px;
+        width: 100px;
+        margin-top: 2%;
+        margin-right: 89.5%;
+        text-decoration: none;
+        border-radius: 4%;
+        }
+
+
+
+
+
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    /* Alinha verticalmente ao topo */
+    justify-content: space-between;
+    /* Espaça o título e o texto para as extremidades */
+    width: 80%;
+    /* Largura máxima do header */
+    margin-top: 100px;
+    /* Espaço acima do header */
+    position: relative;
+    /* Necessário para o posicionamento absoluto do título */
+}
+
+
+/* Estiliza o container do título */
+.container {
+    position: absolute;
+    top: 100px;
+    /* Ajusta a posição para baixo */
+    left: 100px;
+    /* Ajusta a posição para a direita */
+    z-index: 10;
+    /* Garante que o título fique sobre o fundo */
+}
+
+/* Estiliza o título "Sobre Nós" */
+.title {
+    font-size: 75px;
+    /* Tamanho da fonte */
+    color: #4d4d4d;
+    /* Cor do texto */
+    margin: 0;
+    /* Remove a margem padrão do h1 */
+}
+
+/* Estilos para a galeria de imagens */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Define 4 colunas de igual largura */
+    gap: 60px;
+    /* Aumenta o espaço entre os itens */
+    padding: 20px;
+    margin-top: 50px;
+    /* Ajusta o espaço superior para mover a galeria mais para cima */
+    width: 80%;
+    /* Define a largura da galeria para manter o layout consistente */
+    position: relative;
+    /* Necessário para o posicionamento dos GIFs */
+}
+
+/* Estiliza cada item da galeria */
+.item {
+    position: relative;
+    /* Necessário para posicionar o GIF de fundo */
+    text-align: center;
+    width: 250px;
+    /* Define a largura do item */
+    height: 250px;
+    /* Define a altura do item */
+}
+
+/* Define o estilo do GIF de fundo */
+.gif-background {
+    position: absolute;
+    top: 60%;
+    /* Move o GIF um pouco para baixo dentro do item */
+    left: 50%;
+    width: 200px;
+    /* Define a largura do GIF menor que a imagem */
+    height: 200px;
+    /* Define a altura do GIF menor que a imagem */
+    background-size: cover;
+    /* Faz o GIF cobrir a área definida */
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    /* Centraliza o GIF dentro do item */
+    z-index: -1;
+    /* Coloca o GIF atrás da imagem */
+    border-radius: 10px;
+    /* Adiciona bordas arredondadas ao fundo do item */
+}
+
+/* Estiliza a imagem */
+.item img {
+    width: 100%;
+    /* Ajusta a largura da imagem para preencher o item */
+    height: 100%;
+    /* Ajusta a altura da imagem para preencher o item */
+    object-fit: cover;
+    /* Ajusta as imagens para não distorcer */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    position: relative;
+    /* Garante que a imagem fique sobre o GIF */
+}
+
+/* Define o estilo dos nomes dentro dos quadrados arredondados */
+.name {
+    position: relative;
+    /* Necessário para o posicionamento dos quadrados */
+    margin-top: 10px;
+    /* Espaço entre a imagem e o nome */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    color: #4d4d4d;
+    /* Cor do texto */
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    z-index: 1;
+    /* Garante que o texto fique sobre o quadrado */
+}
+
+.name::before {
+    content: '';
+    /* Não exibe nenhum conteúdo real, apenas o quadrado */
+    position: absolute;
+    top: 50%;
+    /* Posiciona o quadrado verticalmente no meio */
+    left: 50%;
+    /* Posiciona o quadrado horizontalmente no meio */
+    transform: translate(-50%, -50%);
+    /* Centraliza o quadrado em relação ao texto */
+    width: calc(60%);
+    /* Define a largura do quadrado menor que o texto */
+    height: calc(100% + 25px);
+    /* Define a altura do quadrado menor que o texto */
+    padding: 2px;
+    /* Adiciona espaço reduzido ao redor do texto */
+    border: 2px solid #4d4d4d;
+    /* Adiciona uma borda ao quadrado, tornando-o oco */
+    border-radius: 20px;
+    /* Faz o quadrado ter bordas arredondadas */
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente o texto dentro do quadrado */
+    justify-content: center;
+    /* Centraliza horizontalmente o texto dentro do quadrado */
+    z-index: -1;
+    /* Coloca o quadrado atrás do texto */
+    box-sizing: border-box;
+    /* Inclui a borda e o padding no tamanho total */
+}
+
+/* Estilos para o texto abaixo da galeria de imagens */
+.text-content {
+    position: relative;
+    margin-top: 0px;
+    /* Espaço acima do texto */
+    padding: 20px;
+    width: 45%;
+    /* Define a largura do texto */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    color: #4d4d4d;
+    /* Cor do texto */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+    background: none;
+    /* Remove o fundo branco do texto */
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .header {
+        margin-top: 30px;
+        /* Ajusta o espaço acima do header para telas menores */
+    }
+
+    .gallery {
+        gap: 10px;
+        /* Reduz o espaço entre os itens para telas menores */
+        margin-top: 20px;
+        /* Ajusta o espaço superior da galeria */
+    }
+
+    .item {
+        width: 100%;
+        /* Ajusta a largura dos itens para preencher o espaço disponível */
+        height: auto;
+        /* Ajusta a altura automaticamente */
+    }
+
+    .title {
+        font-size: 32px;
+        /* Ajusta o tamanho da fonte do título para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+        /* Ajusta ainda mais o tamanho da fonte do título */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        /* Ajusta o número de colunas para telas muito pequenas */
+    }
+
+    .name {
+        font-size: 12px;
+        /* Reduz o tamanho da fonte do nome para telas menores */
+    }
+
+    .text-content {
+        font-size: 12px;
+        /* Reduz o tamanho da fonte do texto */
+        padding: 10px;
+        /* Ajusta o padding para telas menores */
+    }
+}

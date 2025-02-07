@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/codec-pro');
+
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-image: url("imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    /* Removi justify-content e align-items do body, pois isso estava centralizando todo o conteúdo. Centralizar elementos específicos é melhor. */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808f0;
+    height: 100px;
+    padding: 0 20px;
+    position: relative;
+}
+
+@media(max-width:995px) {
+    #logo {
+        width: 30%;
+    }
+
+    .voltar {
+        display: none;
+    }
+
+    nav {
+        height: 70px;
+    }
+}
+
+.perfil {
+    border-radius: 50%;
+    width: 6vh;
+    height: 6vh;
+    object-fit: cover; /* Adicionado para evitar distorção da imagem */
+}
+.fa-solid {
+    color: white;
+    font-size: 50px;
+    margin: 10px 0 0 18px;
+}
+.Quadrado {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 1% auto 0 4%; /* Centraliza horizontalmente com margens automáticas */
+   justify-content: center;
+    max-width: 1200px; /* Largura máxima para telas maiores */
+    padding: 20px; /* Adicionado espaçamento interno */
+}
+
+@media(max-width:995px) {
+    .Quadrado {
+        flex-direction: column;
+        margin-top: 20px; /* Espaçamento superior em telas menores */
+        align-items: center; /* Centraliza os itens verticalmente */
+        padding: 10px;
+    }
+}
+
+.img {
+    margin-left: 10%;
+    width: 45vh;
+    height: 45vh;
+    border-radius: 5%;
+    object-fit: cover;
+    margin-right: 20px; /* Espaçamento entre imagem e texto */
+}
+
+@media(max-width:995px) {
+    .img {
+        margin-left: 0;
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaçamento abaixo da imagem em telas menores */
+    }
+}
+
+.container {
+    max-width: 600px; /* Aumentei para dar mais espaço ao texto em telas maiores */
+}
+
+.titulo {
+    font-size: 5vh;
+    font-family: "Fahkwang", serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #403e3e;
+    margin-bottom: 10px;
+}
+
+.texto {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 2.2vh;
+    line-height: 1.6; /* Aumentei o espaçamento entre linhas para melhor legibilidade */
+    text-align: justify; /* Justifica o texto */
+}
+
+.artista {
+    background: linear-gradient(90deg, #929191 0%, #6c6c6c 50%, #706d6d 100%);
+    border-radius: 35px;
+    padding: 10px 15px; /* Ajustei o padding */
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.artista img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.artista .nome {
+    font-size: 2.2vh;
+    font-family: 'Codec Pro', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/codec-pro');
+
+/* Reset geral (mantido) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* ... (Estilos do body, nav, perfil, Quadrado, img, container, titulo, texto, artista - mantidos) */
+
+/* Estilos para Comentários (REVISADO) */
+.comentarios {
+    align-items: center;
+    margin: 30px auto 0 auto; /* Espaçamento externo */
+    padding: 20px;
+    background-color: #f8f8f8; /* Um tom mais claro de fundo */
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Adicionada borda sutil */
+}
+
+.comentarios h3 {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título "Comentários" */
+}
+
+.comentario {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff; /* Fundo branco para os comentários */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee; /* Adicionada borda sutil */
+}
+
+.comentario img.perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.comentario h4 {
+    margin: 0 0 5px;
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600; /* Nome em negrito */
+}
+
+.comentario p {
+    margin: 0;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify; /* Justifica o texto do comentário */
+}
+
+.comentario span {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+    align-self: flex-end; /* Alinha a data no final do comentário */
+}
+
+/* Estilo para o formulário de comentários (REVISADO) */
+.formulario_comentario {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.formulario_comentario h4 {
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.formulario_comentario textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.formulario_comentario input[type="submit"] {
+    background-color: #555; /* Cor cinza escura, mais neutra */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Codec Pro', sans-serif;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+}
+
+.formulario_comentario input[type="submit"]:hover {
+    background-color: #333; /* Cinza mais escura no hover */
+}
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    padding: 8px 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+  }
+
+  .like-button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .like-icon {
+    width: 24px;
+    height: 24px;
+    fill: #ddd;
+    transition: fill 0.3s ease;
+  }
+
+  .like-button.active .like-icon {
+    fill: #ff5252;
+  }
+
+  .like-text {
+    font-size: 16px;
+    color: #333;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+  }
+
+  .like-button.active .like-text {
+    color: #ff5252;
+  }
+
+  .contador-curtidas-poema {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 8px;
+    color: #333;
+  }
+
+  .like-button.active .contador-curtidas-poema {
+    color: #ff5252;
+  }
+  .curtidas-poema {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    justify-content: flex-end;
+  }

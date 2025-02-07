@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud-Cadastrar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Lato', sans-serif;
+            background-image: url("imagens/fundo.jpg");
+            background-size: cover;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 700;
+            margin-top: 10px;
+            display: inline-block;
+        }
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+            
+                    body {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        font-family: 'Lato', sans-serif;
+                        background-image: url("imagens/fundo.jpg");
+                        background-size: cover;
+                        color: #333;
+                    }
+            
+                    form {
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        text-align: center;
+                    }
+            
+                    h1 {
+                        margin-bottom: 20px;
+                    }
+            
+                    label {
+                        display: block;
+                        margin-bottom: 8px;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+            
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="password"] {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    }
+            
+                    input[type="submit"] {
+                        background-color: #4CAF50;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+            
+                    input[type="submit"]:hover {
+                        background-color: #45a049;
+                    }
+            
+                    a {
+                        text-decoration: none;
+                        color: #007bff;
+                        font-weight: 700;
+                        margin-top: 10px;
+                        display: inline-block;
+                    }
+            
+                    .imagem-selecao {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        margin-bottom: 15px;
+                    }
+            
+                    .imagem-selecao img {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        border: 2px solid transparent;
+                        transition: transform 0.2s;
+                    }
+            
+                    .imagem-selecao img:hover {
+                        transform: scale(1.1);
+                    }
+            
+                    .imagem-selecao img.selecionado {
+                        border: 2px solid #007bff;
+                    }
+                </style>
+            </head>
+            
+            <body>
+                <form method="POST" action="processa.php">
+                    <h1>Cadastrar Usuário</h1>
+                    <label for="nome">Nome de Usuário:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome de Usuário" required>
+            
+                    <label for="email">Email de Usuário:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu melhor email">
+            
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            
+                    <label for="imagem">Escolha uma imagem de perfil:</label>
+                    <div class="imagem-selecao">
+                        <img src="icons/tiger.jpg" alt="Tigre" onclick="selecionarImagem('icons/tiger.jpg', this)">
+                        <img src="icons/bear.jpg" alt="Urso" onclick="selecionarImagem('icons/bear.jpg', this)">
+                        <img src="icons/lion.jpg" alt="Leão" onclick="selecionarImagem('icons/lion.jpg', this)">
+                        <img src="icons/cat.jpg" alt="Gato" onclick="selecionarImagem('icons/cat.jpg', this)">
+                    </div>
+                    <input type="hidden" id="imagem" name="imagem" value="icons/tiger.jpg">
+            
+                    <input type="submit" value="Cadastrar">
+                    <a onclick="history.back()">Voltar</a>
+                </form>
+            
+                <script>
+                    function selecionarImagem(src, elemento) {
+                        document.getElementById('imagem').value = src;
+                        document.querySelectorAll('.imagem-selecao img').forEach(img => img.classList.remove('selecionado'));
+                        elemento.classList.add('selecionado');
+                    }
+                </script>
+            </body>
+            
+            </html>
+            
+            <option value="icons/tiger.jpg"></option>
+            <option value="icons/bear.jpg"></option>
+            <option value="icons/lion.jpg"></option>
+            <option value="icons/cat.jpg"></option>
+        </select>
+    </form>
+</body>
+
+</html>

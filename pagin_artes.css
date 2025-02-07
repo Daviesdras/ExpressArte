@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do body */
+body {
+    background-image: url("imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+/* Estilo do link */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo da barra de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808f0;
+    height: 100px;
+    padding: 0 20px;
+    position: relative;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem linha quando o espaço for pequeno */
+}
+
+/* Estilo do logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo da lista de navegação */
+.nav-list {
+    list-style: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 70px;
+    /* Reduz o espaço entre os itens do menu para telas menores */
+    padding: 0;
+    margin: 0;
+    margin-right: 5%;
+    flex: 1;
+    /* Permite que a lista de navegação use o espaço disponível */
+}
+
+/* Estilo dos itens da lista de navegação */
+.nav-list li {
+    margin: 0;
+}
+
+.perfil {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+
+
+}
+
+.perfil2 {
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+
+
+}
+
+/* Estilo do botão de usuário */
+#usuario {
+    border-radius: 50%;
+    background-origin: padding-box;
+    margin-left: 20px;
+    /* Ajuste a margem esquerda */
+    width: 50px;
+    height: 50px;
+}
+
+/* Estilo da barra de pesquisa */
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza a barra de pesquisa horizontalmente */
+    flex: 2;
+    /* Permite que a barra de pesquisa use o espaço disponível */
+    margin: 0 auto;
+    /* Centraliza a barra de pesquisa no espaço disponível */
+}
+
+.input {
+    width: 100%;
+    /* Faz a barra de pesquisa ocupar toda a largura disponível */
+    max-width: 570px;
+    /* Define um limite máximo de largura */
+    height: 40px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: 0.3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus {
+    outline: none;
+    border-color: rgba(0, 47, 73, 0);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
+}
+
+/* Estilo do ícone de pesquisa */
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #000000;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .input {
+        max-width: 400px;
+        /* Ajusta a largura máxima da barra de pesquisa */
+    }
+
+    .nav-list {
+        gap: 20px;
+        /* Reduz o espaço entre os itens do menu */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .group {
+        flex: 1;
+        /* Ajusta o espaço da barra de pesquisa */
+        margin: 0 auto;
+        /* Centraliza a barra de pesquisa */
+        width: 100%;
+        /* Garante que a barra de pesquisa ocupe toda a largura disponível */
+    }
+
+    .input {
+        max-width: 300px;
+        /* Ajusta a largura máxima da barra de pesquisa */
+    }
+
+
+
+    .menu-toggle {
+        display: block;
+        /* Exibe o ícone do menu */
+        font-size: 30px;
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .input {
+        max-width: 200px;
+        /* Ajusta a largura máxima da barra de pesquisa para telas menores */
+    }
+
+    #usuario {
+        width: 40px;
+        /* Diminui o tamanho do ícone de perfil */
+        height: 40px;
+    }
+
+    .logo img {
+        width: 100px;
+        /* Ajusta o tamanho do logo */
+    }
+}
+
+.card {
+   background-color: #2f2f34;
+    margin-left: 5%;
+    margin-top: 4%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    /* Adiciona espaçamento entre os cards */
+    display: flex;
+    border: 1px solid #676767;
+    /* Borda de 1px de largura, cor preta */
+    border-radius: 30px;
+    /* Mantém o raio da borda existente */
+    padding: 10px;
+    /* Espaço interno para que o conteúdo não encoste na borda */
+}
+
+.imgBox img {
+    width: 360px;
+    /* Largura fixa */
+    height: 400px;
+    /* Altura fixa */
+    object-fit: cover;
+    position: relative;
+    background: var(--clr);
+    border-radius: 20px;
+    margin: 20px 20px 20px 10px;
+}
+.content {
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+   
+}
+li {
+    list-style-type: none;
+    display: flex;
+}
+
+.info-list {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.info-list li {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--clr-tag);
+    color: #fff;
+    font-size: 14px;
+}
+h3{
+    text-transform: capitalize;
+}
